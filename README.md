@@ -1,7 +1,7 @@
 # NBPUser- behavior trace
 
 
-![swift](http://chuantu.biz/t6/265/1522114521x-1404793220.png)
+![swift](http://chuantu.biz/t6/265/1522114521x-1404793220.png)(swift)
 ![nbp](http://chuantu.biz/t6/265/1522114521x-1404793220.png)
 ![userbehaviortrace](http://chuantu.biz/t6/265/1522114521x-1404793220.png)
 ![mergesort](http://chuantu.biz/t6/265/1522114521x-1404793220.png)
