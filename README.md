@@ -1,11 +1,11 @@
 # NBPUser- behavior trace
 
 
-![swift](http://chuantu.biz/t6/273/1522900210x1822611227.jpg)-swift
-![nbp](http://baidu.com)-nbp
-![userbehaviortrace](http://baidu.com)-userbehaviortrace
-![mergesort](http://baidu.com)-mergesort
-![customqueue](http://baidu.com)-customqueue
+![swift](http://chuantu.biz/t6/273/1522900210x1822611227.jpg)-swift  
+![nbp](http://chuantu.biz/t6/273/1522900210x1822611227.jpg)-nbp  
+![userbehaviortrace](http://chuantu.biz/t6/273/1522900210x1822611227.jpg)-userbehaviortrace  
+![mergesort](http://chuantu.biz/t6/273/1522900210x1822611227.jpg)-mergesort  
+![customqueue](http://chuantu.biz/t6/273/1522900210x1822611227.jpg)-customqueue  
 
 
 
