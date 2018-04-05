@@ -1,11 +1,11 @@
 # NBPUser- behavior trace
 
 
-![swift](http://baidu.com)
-![nbp](http://baidu.com)
-![userbehaviortrace](http://baidu.com)
-![mergesort](http://baidu.com)
-![customqueue](http://baidu.com)
+![swift](http://chuantu.biz/t6/265/1522114521x-1404793220.png)
+![nbp](http://chuantu.biz/t6/265/1522114521x-1404793220.png)
+![userbehaviortrace](http://chuantu.biz/t6/265/1522114521x-1404793220.png)
+![mergesort](http://chuantu.biz/t6/265/1522114521x-1404793220.png)
+![customqueue](http://chuantu.biz/t6/265/1522114521x-1404793220.png)
 
 
 
@@ -21,4 +21,4 @@
 
 ## 5.logic layer [ibll follow JAVA-SPRING]
 
-# ====Eamil : 451145552@qq.com====
+## ====Eamil : 451145552@qq.com====
