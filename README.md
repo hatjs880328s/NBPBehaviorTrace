@@ -22,3 +22,6 @@
 ### 5.logic layer [ibll follow JAVA-SPRING]
 
 #### ====Eamil : 451145552@qq.com====
+
+
+### 下一个迭代需要处理：将目前mem-disk这一步的IO方式优化：由原来的nsUserdefault变为mmap方式。
