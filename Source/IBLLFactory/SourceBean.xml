@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+  <!--Real Class -->
+  <bean id="oneBll" class="BLLOne"></bean>
+  <!--Swift can't easy Pv & engineer can't easy Pv -->
+  <bean id="person" class="Person">
+    <property name="rush" ref="oneBll"/>
+  </bean>
+</beans>
+

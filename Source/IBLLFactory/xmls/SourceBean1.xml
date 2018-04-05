@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+  <!--Real Class -->
+  <bean id="eatOrange" class="EatOrange"></bean>
+  <bean id="twoBll" class="BLLTwo"></bean>
+  <!--Swift can't easy & engineer can't easy Pv -->
+  <bean id="person" class="Person">
+    <property name="eat" ref="eatOrange"/>
+  </bean>
+</beans>
+
