@@ -25,8 +25,8 @@
 
 
 ### 1.0: nbp user behavior trace  HHHHUGE UPDATE:
- > DISK-progress center
- > TODO:
+  DISK-progress center
+  TODO:
  > 1.use mmap save the memory event infos
  > 2.read event info from file : if success then deleate the file ,
    if deleate file success return the fileStrinfo else return nil.
