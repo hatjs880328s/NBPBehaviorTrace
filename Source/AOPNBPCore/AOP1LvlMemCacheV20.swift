@@ -30,7 +30,7 @@ protocol IAOPMemCache:NSObjectProtocol {
     
 }
 
-class AOPMemCacheV20: NSObject,IAOPMemCache {
+class AOP1LvlMemCacheV20: NSObject,IAOPMemCache {
     
     var postCount = 10
     
@@ -45,19 +45,19 @@ class AOPMemCacheV20: NSObject,IAOPMemCache {
     /// operate thread [global-thread]
     var memCacheThread: IISlinkManager = IISlinkManager(linkname: NSUUID().uuidString)
     
-    private static var shareInstance: AOPMemCacheV20!
+    private static var shareInstance: AOP1LvlMemCacheV20!
     
     private override init() {
         super.init()
         eventsArr = []
         eventsDics = [:]
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(postSecs), target: self, selector: #selector(AOPMemCacheV20.each30SecsPostEventsFromArrs), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(postSecs), target: self, selector: #selector(AOP1LvlMemCacheV20.each30SecsPostEventsFromArrs), userInfo: nil, repeats: true)
     }
     
     /// singleInstance
-    static func getInstance()->AOPMemCacheV20 {
+    static func getInstance()->AOP1LvlMemCacheV20 {
         if shareInstance == nil {
-            shareInstance = AOPMemCacheV20()
+            shareInstance = AOP1LvlMemCacheV20()
         }
         return shareInstance
     }
@@ -109,7 +109,7 @@ class AOPMemCacheV20: NSObject,IAOPMemCache {
     
     func postInfoToDisk() {
         GCDUtils.toMianThreadProgressSome {
-            AOPDiskCache.getInstance().addItemsFromMemCache(dicData: self.eventsDics)
+            AOP2LvlDiskCache.getInstance().addItemsFromMemCache(dicData: self.eventsDics)
             self.eventsDics.removeAll()
         }
     }

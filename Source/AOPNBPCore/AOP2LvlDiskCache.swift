@@ -25,13 +25,13 @@ import UIKit
  analyze event & progress them if should [data presistence]
  analyze event & progress them if should [upload to remote server]
  */
-class AOPDiskCache: NSObject {
+class AOP2LvlDiskCache: NSObject {
     
     var postCount = 10
     
     var postSecs = 30
     
-    private static var shareInstance :AOPDiskCache!
+    private static var shareInstance :AOP2LvlDiskCache!
     
     var dics: [String : [GodfatherEvent]] = [:]
     
@@ -45,16 +45,16 @@ class AOPDiskCache: NSObject {
     
     private override init() {
         super.init()
-        self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(self.postSecs), target: self, selector: #selector(AOPDiskCache.each30SecsPostEventsFromDic), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(self.postSecs), target: self, selector: #selector(AOP2LvlDiskCache.each30SecsPostEventsFromDic), userInfo: nil, repeats: true)
         
         if UserDefaults.standard.object(forKey: self.usKeyStr) == nil {
             UserDefaults.standard.set("", forKey: self.usKeyStr)
         }
     }
     
-    public static func getInstance()->AOPDiskCache {
+    public static func getInstance()->AOP2LvlDiskCache {
         if shareInstance == nil {
-            shareInstance = AOPDiskCache()
+            shareInstance = AOP2LvlDiskCache()
         }
         return shareInstance
     }

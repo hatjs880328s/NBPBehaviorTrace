@@ -15,13 +15,13 @@
 		567185272060AB14002F4272 /* IIMergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567185162060AB14002F4272 /* IIMergeSort.swift */; };
 		567185282060AB14002F4272 /* AOPCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567185182060AB14002F4272 /* AOPCore.swift */; };
 		567185292060AB14002F4272 /* AOPCoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567185192060AB14002F4272 /* AOPCoreExtension.swift */; };
-		5671852A2060AB14002F4272 /* AOPDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5671851A2060AB14002F4272 /* AOPDiskCache.swift */; };
+		5671852A2060AB14002F4272 /* AOP2LvlDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5671851A2060AB14002F4272 /* AOP2LvlDiskCache.swift */; };
 		5671852B2060AB14002F4272 /* AOPEventFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5671851B2060AB14002F4272 /* AOPEventFilter.swift */; };
 		5671852C2060AB14002F4272 /* AOPEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5671851C2060AB14002F4272 /* AOPEvents.swift */; };
 		5671852D2060AB14002F4272 /* AOPEventsUploadCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5671851D2060AB14002F4272 /* AOPEventsUploadCenter.swift */; };
 		5671852E2060AB14002F4272 /* AOPGCDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5671851E2060AB14002F4272 /* AOPGCDExtension.swift */; };
 		5671852F2060AB14002F4272 /* AOPMemCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5671851F2060AB14002F4272 /* AOPMemCache.swift */; };
-		567185302060AB14002F4272 /* AOPMemCacheV20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567185202060AB14002F4272 /* AOPMemCacheV20.swift */; };
+		567185302060AB14002F4272 /* AOP1LvlMemCacheV20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567185202060AB14002F4272 /* AOP1LvlMemCacheV20.swift */; };
 		567185312060AB14002F4272 /* AOPNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567185212060AB14002F4272 /* AOPNotificationCenter.swift */; };
 		567185322060AB14002F4272 /* AOPNotificationCenterProgressCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567185222060AB14002F4272 /* AOPNotificationCenterProgressCenter.swift */; };
 		567185332060AB14002F4272 /* AOPSwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567185232060AB14002F4272 /* AOPSwiftExtension.swift */; };
@@ -64,13 +64,13 @@
 		567185162060AB14002F4272 /* IIMergeSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IIMergeSort.swift; sourceTree = "<group>"; };
 		567185182060AB14002F4272 /* AOPCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPCore.swift; sourceTree = "<group>"; };
 		567185192060AB14002F4272 /* AOPCoreExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPCoreExtension.swift; sourceTree = "<group>"; };
-		5671851A2060AB14002F4272 /* AOPDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPDiskCache.swift; sourceTree = "<group>"; };
+		5671851A2060AB14002F4272 /* AOP2LvlDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOP2LvlDiskCache.swift; sourceTree = "<group>"; };
 		5671851B2060AB14002F4272 /* AOPEventFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPEventFilter.swift; sourceTree = "<group>"; };
 		5671851C2060AB14002F4272 /* AOPEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPEvents.swift; sourceTree = "<group>"; };
 		5671851D2060AB14002F4272 /* AOPEventsUploadCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPEventsUploadCenter.swift; sourceTree = "<group>"; };
 		5671851E2060AB14002F4272 /* AOPGCDExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPGCDExtension.swift; sourceTree = "<group>"; };
 		5671851F2060AB14002F4272 /* AOPMemCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPMemCache.swift; sourceTree = "<group>"; };
-		567185202060AB14002F4272 /* AOPMemCacheV20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPMemCacheV20.swift; sourceTree = "<group>"; };
+		567185202060AB14002F4272 /* AOP1LvlMemCacheV20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOP1LvlMemCacheV20.swift; sourceTree = "<group>"; };
 		567185212060AB14002F4272 /* AOPNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPNotificationCenter.swift; sourceTree = "<group>"; };
 		567185222060AB14002F4272 /* AOPNotificationCenterProgressCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPNotificationCenterProgressCenter.swift; sourceTree = "<group>"; };
 		567185232060AB14002F4272 /* AOPSwiftExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPSwiftExtension.swift; sourceTree = "<group>"; };
@@ -138,13 +138,13 @@
 			children = (
 				567185182060AB14002F4272 /* AOPCore.swift */,
 				567185192060AB14002F4272 /* AOPCoreExtension.swift */,
-				5671851A2060AB14002F4272 /* AOPDiskCache.swift */,
+				5671851A2060AB14002F4272 /* AOP2LvlDiskCache.swift */,
 				5671851B2060AB14002F4272 /* AOPEventFilter.swift */,
 				5671851C2060AB14002F4272 /* AOPEvents.swift */,
 				5671851D2060AB14002F4272 /* AOPEventsUploadCenter.swift */,
 				5671851E2060AB14002F4272 /* AOPGCDExtension.swift */,
 				5671851F2060AB14002F4272 /* AOPMemCache.swift */,
-				567185202060AB14002F4272 /* AOPMemCacheV20.swift */,
+				567185202060AB14002F4272 /* AOP1LvlMemCacheV20.swift */,
 				567185212060AB14002F4272 /* AOPNotificationCenter.swift */,
 				567185222060AB14002F4272 /* AOPNotificationCenterProgressCenter.swift */,
 				567185232060AB14002F4272 /* AOPSwiftExtension.swift */,
@@ -494,12 +494,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				56738A122057CA3D00EDFB39 /* TwoViewController.swift in Sources */,
-				567185302060AB14002F4272 /* AOPMemCacheV20.swift in Sources */,
+				567185302060AB14002F4272 /* AOP1LvlMemCacheV20.swift in Sources */,
 				567185292060AB14002F4272 /* AOPCoreExtension.swift in Sources */,
 				567185282060AB14002F4272 /* AOPCore.swift in Sources */,
 				5671852F2060AB14002F4272 /* AOPMemCache.swift in Sources */,
 				5671852C2060AB14002F4272 /* AOPEvents.swift in Sources */,
-				5671852A2060AB14002F4272 /* AOPDiskCache.swift in Sources */,
+				5671852A2060AB14002F4272 /* AOP2LvlDiskCache.swift in Sources */,
 				567185272060AB14002F4272 /* IIMergeSort.swift in Sources */,
 				5671852D2060AB14002F4272 /* AOPEventsUploadCenter.swift in Sources */,
 				562B1CB5206886B500F1182F /* PrivateFramework.swift in Sources */,

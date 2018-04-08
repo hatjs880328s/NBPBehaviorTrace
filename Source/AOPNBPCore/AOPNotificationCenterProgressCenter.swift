@@ -35,7 +35,7 @@ class AOPNotificationCenterProgressCenter : NSObject {
     func progressUserinfo() {}
     
     func insertIntoMemCacheList(item: GodfatherEvent) {
-        AOPMemCacheV20.getInstance().addOneItemFromNotificationCenter(item: item)
+        AOP1LvlMemCacheV20.getInstance().addOneItemFromNotificationCenter(item: item)
     }
     
     func alertInfo(realInfo: GodfatherEvent) {
