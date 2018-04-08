@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AOPNBPCoreManagerCenter.getInstance().startService()
         AOPEventUploadCenter.getInstance().startService()
         
-        BeanDicCenter.getInstance().startService()
+        //BeanDicCenter.getInstance().startService()
         
         let con = TwoViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)

@@ -23,9 +23,5 @@ class TwoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        
-        let bllone = BeanFactory().create(with: "oneBll") as! IBLLOne
-        bllone.getName()
-        bllone.setName()
     }
 }
