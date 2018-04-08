@@ -33,9 +33,9 @@
 		5675C0A8205777C20069CB02 /* sourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675C0A7205777C20069CB02 /* sourceTests.swift */; };
 		5675C0BB205779B10069CB02 /* sourceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675C0BA205779B10069CB02 /* sourceUITests.swift */; };
 		5694BA352061207E006A9465 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5694BA372061207E006A9465 /* InfoPlist.strings */; };
-		56AF59082079A2B600866D4B /* AOPIOProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF59072079A2B600866D4B /* AOPIOProgress.swift */; };
-		56AF590B2079A39900866D4B /* AOPMmapUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF590A2079A39900866D4B /* AOPMmapUtility.swift */; };
+		56AF59082079A2B600866D4B /* AOPDiskIOProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF59072079A2B600866D4B /* AOPDiskIOProgress.swift */; };
 		56AF59112079A41500866D4B /* AOPMmapOCUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AF59102079A41500866D4B /* AOPMmapOCUtility.m */; };
+		56AF59132079EF5900866D4B /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF59122079EF5900866D4B /* ThreeViewController.swift */; };
 		56CF55D1205F484700051D6F /* ExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF55D0205F484700051D6F /* ExtensionTest.swift */; };
 		61E074C8649AA5865846A985 /* Pods_sourceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10583F8FD2908CA6B62893EA /* Pods_sourceTests.framework */; };
 /* End PBXBuildFile section */
@@ -94,10 +94,10 @@
 		5694BA362061207E006A9465 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5694BA3820612095006A9465 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		5694BA3920612169006A9465 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		56AF59072079A2B600866D4B /* AOPIOProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPIOProgress.swift; sourceTree = "<group>"; };
-		56AF590A2079A39900866D4B /* AOPMmapUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPMmapUtility.swift; sourceTree = "<group>"; };
+		56AF59072079A2B600866D4B /* AOPDiskIOProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AOPDiskIOProgress.swift; sourceTree = "<group>"; };
 		56AF590F2079A41500866D4B /* AOPMmapOCUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOPMmapOCUtility.h; sourceTree = "<group>"; };
 		56AF59102079A41500866D4B /* AOPMmapOCUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOPMmapOCUtility.m; sourceTree = "<group>"; };
+		56AF59122079EF5900866D4B /* ThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
 		56CF55D0205F484700051D6F /* ExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTest.swift; sourceTree = "<group>"; };
 		5C70B00FD17990C73C6B7B7E /* Pods-source.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-source.release.xcconfig"; path = "Pods/Target Support Files/Pods-source/Pods-source.release.xcconfig"; sourceTree = "<group>"; };
 		936B1EE71F2B16869D64F867 /* Pods-sourceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sourceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sourceTests/Pods-sourceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 				5671851F2060AB14002F4272 /* AOPMemCache.swift */,
 				567185202060AB14002F4272 /* AOP1LvlMemCacheV20.swift */,
 				5671851A2060AB14002F4272 /* AOP2LvlMemCache.swift */,
-				56AF59072079A2B600866D4B /* AOPIOProgress.swift */,
+				56AF59072079A2B600866D4B /* AOPDiskIOProgress.swift */,
 				5671851D2060AB14002F4272 /* AOPEventsUploadCenter.swift */,
 				56AF59092079A39900866D4B /* AOPMmapNBPUTCore */,
 			);
@@ -202,6 +202,7 @@
 				566B86372069D81700FD1FEC /* 80x80.png */,
 				5675C092205777C20069CB02 /* AppDelegate.swift */,
 				56738A112057CA3D00EDFB39 /* TwoViewController.swift */,
+				56AF59122079EF5900866D4B /* ThreeViewController.swift */,
 				562B1CB4206886B500F1182F /* PrivateFramework.swift */,
 				5694BA372061207E006A9465 /* InfoPlist.strings */,
 				5675C099205777C20069CB02 /* Assets.xcassets */,
@@ -234,7 +235,6 @@
 		56AF59092079A39900866D4B /* AOPMmapNBPUTCore */ = {
 			isa = PBXGroup;
 			children = (
-				56AF590A2079A39900866D4B /* AOPMmapUtility.swift */,
 				56AF590F2079A41500866D4B /* AOPMmapOCUtility.h */,
 				56AF59102079A41500866D4B /* AOPMmapOCUtility.m */,
 			);
@@ -525,14 +525,14 @@
 				562B1CB5206886B500F1182F /* PrivateFramework.swift in Sources */,
 				567185352060AB14002F4272 /* IITaskModel.swift in Sources */,
 				567185312060AB14002F4272 /* AOPNotificationCenter.swift in Sources */,
+				56AF59132079EF5900866D4B /* ThreeViewController.swift in Sources */,
 				567185322060AB14002F4272 /* AOPNotificationCenterProgressCenter.swift in Sources */,
 				567185342060AB14002F4272 /* IISlinkManager.swift in Sources */,
-				56AF590B2079A39900866D4B /* AOPMmapUtility.swift in Sources */,
 				567185332060AB14002F4272 /* AOPSwiftExtension.swift in Sources */,
 				5671852E2060AB14002F4272 /* AOPGCDExtension.swift in Sources */,
 				5675C093205777C20069CB02 /* AppDelegate.swift in Sources */,
 				5671852B2060AB14002F4272 /* AOPEventFilter.swift in Sources */,
-				56AF59082079A2B600866D4B /* AOPIOProgress.swift in Sources */,
+				56AF59082079A2B600866D4B /* AOPDiskIOProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,39 +17,43 @@
 u_long memCacheSize = 0 ;
 const char *contents = "" ;
 
+/**
+ write str data to file with mmap-tec
+ 
+ @param fileName custom file name [UUID]
+ @param content real str info
+ */
 - (void)writeData:(NSString *)fileName fileContent: (NSString *)content {
-    NSString *routePath = [NSString stringWithFormat:@"AOPNBPUTFile/%@",fileName];
-    NSString *path = [[[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:routePath] stringByAppendingPathExtension:@"txt"];
+    NSString *routePath = [NSString stringWithFormat:@"%@",fileName];
+    NSString *dirPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"AOPNBPUTFile" ];
+    NSString *filePath = [[dirPath stringByAppendingPathComponent:routePath] stringByAppendingPathExtension:@"txt"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    [fileManager createFileAtPath:path contents:nil attributes:nil];
-    NSError *error;
-    if (error) {
-        NSLog(@"%@",error);
-        return;
-    }
+    //create txt file
+    [fileManager createFileAtPath:filePath contents:nil attributes:nil];
+    //global-parameters set value
     contents = [content cStringUsingEncoding:NSUTF8StringEncoding];
     memCacheSize = content.length;
-    processFile(path.UTF8String);
+    //write file
+    writeFileWithFileName(filePath);
 }
 
 
-void processFile(char * inPathName){
+void writeFileWithFileName( NSString * inPathName){
     size_t dataLength;
     void * dataPtr;
     void *start;
-    if( MapFile( inPathName, &dataPtr, &dataLength ) == 0 )
-    {
+    if( MapFile( inPathName, &dataPtr, &dataLength ) == 0 ){
         start = dataPtr;
         //[last number] is memoryAddress offset size
         dataPtr = dataPtr;
-        //[last number] is counts of your Str length
+        //[last number] is counts of your Str length [strcpy]
         memcpy(dataPtr, contents, memCacheSize);
-        // Unmap files: [last number] is all of your memory length [shouldn't invoking the method]
-        //munmap(start, 3);
+        // Unmap files: [last number] is all of your memory length [invoking the -munmap- function release the memory]
+        munmap(start, memCacheSize);
     }
 }
 
-int MapFile( char * inPathName, void ** outDataPtr, size_t * outDataLength )
+int MapFile( NSString * inPathName, void ** outDataPtr, size_t * outDataLength )
 {
     int outError;
     int fileDescriptor;
@@ -59,7 +63,7 @@ int MapFile( char * inPathName, void ** outDataPtr, size_t * outDataLength )
     *outDataPtr = NULL;
     *outDataLength = 0;
     // Open the file.
-    fileDescriptor = open( inPathName, O_RDWR, 0 );
+    fileDescriptor = open(inPathName.UTF8String, O_RDWR, 0 );
     if( fileDescriptor < 0 ){
         outError = errno;
     }else{
@@ -85,7 +89,6 @@ int MapFile( char * inPathName, void ** outDataPtr, size_t * outDataLength )
         // Now close the file. The kernel doesn’t use our file descriptor.
         close( fileDescriptor );
     }
-    
     return outError;
 }
 

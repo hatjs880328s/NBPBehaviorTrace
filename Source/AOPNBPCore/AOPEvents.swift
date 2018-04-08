@@ -65,7 +65,7 @@ class VCEvent: GodfatherEvent {
     }
     
     override var description: String {
-        return "[ event: " + sourceName + parametersJoinedCharacter + triggerDate.description +
+        return "[E:" + sourceName + parametersJoinedCharacter + triggerDate.description +
             parametersJoinedCharacter + vceventType.rawValue +
         "]\n"
     }
@@ -82,7 +82,7 @@ class TBEvent: GodfatherEvent {
     }
     
     override var description: String {
-        return "[ event: " + sourceName + parametersJoinedCharacter + triggerDate.description +
+        return "[E:" + sourceName + parametersJoinedCharacter + triggerDate.description +
             parametersJoinedCharacter + "(section:\(indexpath.section) row:\(indexpath.row))" +
         "]\n"
     }
@@ -99,7 +99,7 @@ class SendActionEvent: GodfatherEvent {
     }
     
     override var description: String {
-        return "[ event: " + sourceName + parametersJoinedCharacter + triggerDate.description +
+        return "[E:" + sourceName + parametersJoinedCharacter + triggerDate.description +
             parametersJoinedCharacter + controlType.rawValue +
         "]\n"
     }

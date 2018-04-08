@@ -23,6 +23,9 @@ class TwoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        AOPMmapOCUtility().writeData("mrshan2", fileContent: "dfasfqqq")
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.navigationController?.pushViewController(ThreeViewController(), animated: true)
     }
 }

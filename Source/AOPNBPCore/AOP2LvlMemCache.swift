@@ -39,17 +39,11 @@ class AOP2LvlMemCache: NSObject {
     
     var timer: Timer!
     
-    private var usKeyStr = "AOP_NBP_EVENTS_UDKEY"
-    
     let eventJoinedStr = "-"
     
     private override init() {
         super.init()
-        self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(self.postSecs), target: self, selector: #selector(AOP2LvlMemCache.each30SecsPostEventsFromDic), userInfo: nil, repeats: true)
-        
-        if UserDefaults.standard.object(forKey: self.usKeyStr) == nil {
-            UserDefaults.standard.set("", forKey: self.usKeyStr)
-        }
+        //self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(self.postSecs), target: self, selector: #selector(AOP2LvlMemCache.each30SecsPostEventsFromDic), userInfo: nil, repeats: true)
     }
     
     public static func getInstance()->AOP2LvlMemCache {
@@ -83,58 +77,13 @@ class AOP2LvlMemCache: NSObject {
         self.diskCacheThread.addTask(task: getTask)
     }
     
-    //MARK: set---------
+    //MARK: setvalue to disk---------
     
     /// add data to disk
     private func postDataToDisk() {
         if self.dics.count == 0 { return }else {}
-        var longStrComponentsByEachKey = UserDefaults.standard.string(forKey: self.usKeyStr)
-        for (eachKey,eachValue) in self.dics {
-            longStrComponentsByEachKey! += eachKey
-            self.saveData(key: eachKey, value: eachValue)
-        }
-        UserDefaults.standard.set(longStrComponentsByEachKey, forKey: self.usKeyStr)
+        AOPDiskIOProgress.getInstance().writeEventsToDisk(with: self.dics)
         self.dics.removeAll()
         DEBUGPrintLog("-saved to disk-")
-    }
-    
-    /// real save function
-    private func saveData(key: String,value: [GodfatherEvent]) {
-        var eventStr = String()
-        for eachItem in value {
-            eventStr += (eachItem.description)
-        }
-        UserDefaults.standard.set(eventStr, forKey: key)
-    }
-    
-    //MARK: get---------
-    
-    /// get all key's key
-    func getAllSavedKeys() ->Array<String>?{
-        if let udkey = UserDefaults.standard.string(forKey: self.usKeyStr){
-            let arr:Array<String> = udkey.subStrEachParameterCharacter(countPara: NSUUID().uuidString.lengthOfBytes(using: String.Encoding.utf8))
-            return arr
-        }
-        return nil
-    }
-    
-    /// get [events] from userdefaults by key's key
-    func getDataWithFirstLevelKey(key: String)->String? {
-        if UserDefaults.standard.string(forKey: key) != nil {
-            return UserDefaults.standard.string(forKey: key)
-        }else{
-            return nil
-        }
-    }
-    
-    //MARK: deleate---------
-    
-    /// deleate global key & ud key
-    func deleateDiskDataWithFirstLevelKey(key: String) {
-        if let udkey = UserDefaults.standard.string(forKey: self.usKeyStr){
-            let endStr = udkey.replacingOccurrences(of: udkey as String, with: String())
-            UserDefaults.standard.set(endStr, forKey: self.usKeyStr)
-            UserDefaults.standard.removeObject(forKey: udkey as String)
-        }
     }
 }

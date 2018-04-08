@@ -10,10 +10,25 @@
 
 @interface AOPMmapOCUtility : NSObject
 
-int MapFile( char * inPathName, void ** outDataPtr, size_t * outDataLength );
+int MapFile( NSString * inPathName, void ** outDataPtr, size_t * outDataLength );
 
 
+/**
+ write str data to file with mmap-tec
+
+ @param fileName custom file name [UUID]
+ @param content real str info
+ */
 - (void)writeData:(NSString *)fileName fileContent: (NSString *)content ;
+
+
+/**
+ get user behavior trace info by file name
+
+ @param fileName filename
+ @return str value
+ */
+// - (NSString *)getStrInfoByFileName:(NSString *)fileName ;
 
 @end
 
