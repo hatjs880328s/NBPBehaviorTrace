@@ -24,4 +24,11 @@
 #### ====Eamil : 451145552@qq.com====
 
 
-### Next step：change nsuserdefault & sqlite to MMAP functions
+### 1.0: nbp user behavior trace  HHHHUGE UPDATE:
+ DISK-progress center
+ TODO:
+ 1.use mmap save the memory event infos
+ 2.read event info from file : if success then deleate the file ,
+   if deleate file success return the fileStrinfo else return nil.
+   user should not invoking the deleate function manual.
+ 3.basic file/dir progress [file create | file deleate | file read | file write(use mmap)]
