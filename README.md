@@ -24,7 +24,7 @@
 #### ====Eamil : 451145552@qq.com====
 
 
-### 1.0: nbp user behavior trace  HHHHUGE UPDATE:
+### 1. nbp user behavior trace  [HHHHUGE UPDATE 2018-4-8]
 #### DISK-progress center
 #### TODO:
 *   1.use mmap save the memory event infos.
