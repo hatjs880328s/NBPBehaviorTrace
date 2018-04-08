@@ -109,7 +109,7 @@ class AOP1LvlMemCacheV20: NSObject,IAOPMemCache {
     
     func postInfoToDisk() {
         GCDUtils.toMianThreadProgressSome {
-            AOP2LvlDiskCache.getInstance().addItemsFromMemCache(dicData: self.eventsDics)
+            AOP2LvlMemCache.getInstance().addItemsFromMemCache(dicData: self.eventsDics)
             self.eventsDics.removeAll()
         }
     }

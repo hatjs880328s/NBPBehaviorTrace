@@ -46,11 +46,11 @@ class AOPEventUploadCenter: NSObject {
     
     @objc func uploadEvents() {
         GCDUtils.asyncProgress(dispatchLevel: 3, asyncDispathchFunc: {
-            if let keyskey = AOP2LvlDiskCache.getInstance().getAllSavedKeys() {
+            if let keyskey = AOP2LvlMemCache.getInstance().getAllSavedKeys() {
                 for eachItem in keyskey {
                     DEBUGPrintLog("start-upload...")
-                    DEBUGPrintLog(AOP2LvlDiskCache.getInstance().getDataWithFirstLevelKey(key: eachItem)!)
-                    AOP2LvlDiskCache.getInstance().deleateDiskDataWithFirstLevelKey(key: eachItem)
+                    DEBUGPrintLog(AOP2LvlMemCache.getInstance().getDataWithFirstLevelKey(key: eachItem)!)
+                    AOP2LvlMemCache.getInstance().deleateDiskDataWithFirstLevelKey(key: eachItem)
                     DEBUGPrintLog("ended-upload...")
                 }
             }
