@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2E13EF453384497B361DF9C5 /* Pods_source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466E4E10FEFE95C8EC303234 /* Pods_source.framework */; };
-		56051FCF206B739900571048 /* IBLLOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56051FCE206B739900571048 /* IBLLOne.swift */; };
-		56051FD1206B73A500571048 /* BLLOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56051FD0206B73A500571048 /* BLLOne.swift */; };
-		56051FD5206B8C3600571048 /* SourceBean.xml in Resources */ = {isa = PBXBuildFile; fileRef = 56051FD4206B8C3500571048 /* SourceBean.xml */; };
 		562B1CB5206886B500F1182F /* PrivateFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B1CB4206886B500F1182F /* PrivateFramework.swift */; };
 		565258F12058FF000017CF2C /* AOPDoubleLinkedlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565258F02058FF000017CF2C /* AOPDoubleLinkedlist.swift */; };
 		566B86382069D81700FD1FEC /* 80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 566B86372069D81700FD1FEC /* 80x80.png */; };
@@ -35,22 +32,8 @@
 		5675C09A205777C20069CB02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5675C099205777C20069CB02 /* Assets.xcassets */; };
 		5675C0A8205777C20069CB02 /* sourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675C0A7205777C20069CB02 /* sourceTests.swift */; };
 		5675C0BB205779B10069CB02 /* sourceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675C0BA205779B10069CB02 /* sourceUITests.swift */; };
-		56949DEE20660086009AB1F8 /* SQLite3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56949DD320660085009AB1F8 /* SQLite3.swift */; };
-		56949DF020660086009AB1F8 /* FMDatabase+FTS3.m in Sources */ = {isa = PBXBuildFile; fileRef = 56949DDA20660085009AB1F8 /* FMDatabase+FTS3.m */; };
-		56949DF120660086009AB1F8 /* FMTokenizers.m in Sources */ = {isa = PBXBuildFile; fileRef = 56949DDC20660085009AB1F8 /* FMTokenizers.m */; };
-		56949DF220660086009AB1F8 /* FMDatabase+InMemoryOnDiskIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 56949DE020660085009AB1F8 /* FMDatabase+InMemoryOnDiskIO.m */; };
-		56949DF320660086009AB1F8 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 56949DE320660085009AB1F8 /* FMDatabase.m */; };
-		56949DF420660086009AB1F8 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 56949DE520660085009AB1F8 /* FMDatabaseAdditions.m */; };
-		56949DF520660086009AB1F8 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 56949DE720660085009AB1F8 /* FMDatabasePool.m */; };
-		56949DF620660086009AB1F8 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 56949DE920660085009AB1F8 /* FMDatabaseQueue.m */; };
-		56949DF720660086009AB1F8 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 56949DEC20660085009AB1F8 /* FMResultSet.m */; };
 		5694BA352061207E006A9465 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5694BA372061207E006A9465 /* InfoPlist.strings */; };
-		56B6AAEF206CC4A0008CEB7F /* BeanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B6AAEE206CC4A0008CEB7F /* BeanFactory.swift */; };
-		56B6AAF2206CCD43008CEB7F /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B6AAF1206CCD43008CEB7F /* XMLDictionary.m */; };
-		56B6AAF5206CD38C008CEB7F /* BeanDicCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B6AAF3206CD38C008CEB7F /* BeanDicCenter.swift */; };
-		56B6AAF6206CD38C008CEB7F /* XMLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B6AAF4206CD38C008CEB7F /* XMLFactory.swift */; };
 		56CF55D1205F484700051D6F /* ExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF55D0205F484700051D6F /* ExtensionTest.swift */; };
-		56D4AA3E206C8AE300175F89 /* SourceBean1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 56D4AA3D206C8AE300175F89 /* SourceBean1.xml */; };
 		61E074C8649AA5865846A985 /* Pods_sourceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10583F8FD2908CA6B62893EA /* Pods_sourceTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,9 +57,6 @@
 /* Begin PBXFileReference section */
 		10583F8FD2908CA6B62893EA /* Pods_sourceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sourceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		466E4E10FEFE95C8EC303234 /* Pods_source.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_source.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		56051FCE206B739900571048 /* IBLLOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBLLOne.swift; sourceTree = "<group>"; };
-		56051FD0206B73A500571048 /* BLLOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLLOne.swift; sourceTree = "<group>"; };
-		56051FD4206B8C3500571048 /* SourceBean.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SourceBean.xml; path = ../SourceBean.xml; sourceTree = "<group>"; };
 		562B1CB4206886B500F1182F /* PrivateFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateFramework.swift; sourceTree = "<group>"; };
 		565258F02058FF000017CF2C /* AOPDoubleLinkedlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOPDoubleLinkedlist.swift; sourceTree = "<group>"; };
 		566B86372069D81700FD1FEC /* 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80x80.png; sourceTree = "<group>"; };
@@ -108,37 +88,10 @@
 		5675C0BA205779B10069CB02 /* sourceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sourceUITests.swift; sourceTree = "<group>"; };
 		5675C0BC205779B10069CB02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5675C0C22057AC0F0069CB02 /* source-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "source-Bridging-Header.h"; sourceTree = "<group>"; };
-		56949DD220660085009AB1F8 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
-		56949DD320660085009AB1F8 /* SQLite3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLite3.swift; sourceTree = "<group>"; };
-		56949DD420660085009AB1F8 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
-		56949DD920660085009AB1F8 /* FMDatabase+FTS3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+FTS3.h"; sourceTree = "<group>"; };
-		56949DDA20660085009AB1F8 /* FMDatabase+FTS3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+FTS3.m"; sourceTree = "<group>"; };
-		56949DDB20660085009AB1F8 /* FMTokenizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTokenizers.h; sourceTree = "<group>"; };
-		56949DDC20660085009AB1F8 /* FMTokenizers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTokenizers.m; sourceTree = "<group>"; };
-		56949DDD20660085009AB1F8 /* fts3_tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fts3_tokenizer.h; sourceTree = "<group>"; };
-		56949DDF20660085009AB1F8 /* FMDatabase+InMemoryOnDiskIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+InMemoryOnDiskIO.h"; sourceTree = "<group>"; };
-		56949DE020660085009AB1F8 /* FMDatabase+InMemoryOnDiskIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+InMemoryOnDiskIO.m"; sourceTree = "<group>"; };
-		56949DE220660085009AB1F8 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		56949DE320660085009AB1F8 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		56949DE420660085009AB1F8 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		56949DE520660085009AB1F8 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		56949DE620660085009AB1F8 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		56949DE720660085009AB1F8 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		56949DE820660085009AB1F8 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		56949DE920660085009AB1F8 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		56949DEA20660085009AB1F8 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		56949DEB20660085009AB1F8 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		56949DEC20660085009AB1F8 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		5694BA362061207E006A9465 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5694BA3820612095006A9465 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		5694BA3920612169006A9465 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		56B6AAEE206CC4A0008CEB7F /* BeanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanFactory.swift; sourceTree = "<group>"; };
-		56B6AAF0206CCD43008CEB7F /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
-		56B6AAF1206CCD43008CEB7F /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
-		56B6AAF3206CD38C008CEB7F /* BeanDicCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeanDicCenter.swift; sourceTree = "<group>"; };
-		56B6AAF4206CD38C008CEB7F /* XMLFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLFactory.swift; sourceTree = "<group>"; };
 		56CF55D0205F484700051D6F /* ExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTest.swift; sourceTree = "<group>"; };
-		56D4AA3D206C8AE300175F89 /* SourceBean1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SourceBean1.xml; sourceTree = "<group>"; };
 		5C70B00FD17990C73C6B7B7E /* Pods-source.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-source.release.xcconfig"; path = "Pods/Target Support Files/Pods-source/Pods-source.release.xcconfig"; sourceTree = "<group>"; };
 		936B1EE71F2B16869D64F867 /* Pods-sourceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sourceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sourceTests/Pods-sourceTests.release.xcconfig"; sourceTree = "<group>"; };
 		A81D4D85C80ED7957FE5DF9B /* Pods-sourceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sourceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sourceTests/Pods-sourceTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,19 +125,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		56051FCD206B738A00571048 /* IBLLFactory */ = {
-			isa = PBXGroup;
-			children = (
-				56D4AA3C206C8AE300175F89 /* xmls */,
-				56051FD0206B73A500571048 /* BLLOne.swift */,
-				56051FCE206B739900571048 /* IBLLOne.swift */,
-				56B6AAF3206CD38C008CEB7F /* BeanDicCenter.swift */,
-				56B6AAF4206CD38C008CEB7F /* XMLFactory.swift */,
-				56B6AAEE206CC4A0008CEB7F /* BeanFactory.swift */,
-			);
-			path = IBLLFactory;
-			sourceTree = "<group>";
-		};
 		567185152060AB14002F4272 /* IIMergeSort */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,9 +164,6 @@
 		5675C086205777C20069CB02 = {
 			isa = PBXGroup;
 			children = (
-				568B5955206B97A600F7FA59 /* IIXML */,
-				56051FCD206B738A00571048 /* IBLLFactory */,
-				56949DD120660085009AB1F8 /* IISQLite3.2 */,
 				567185172060AB14002F4272 /* AOPNBPCore */,
 				567185152060AB14002F4272 /* IIMergeSort */,
 				567185242060AB14002F4272 /* IIRQueue */,
@@ -283,92 +220,6 @@
 				5675C0BC205779B10069CB02 /* Info.plist */,
 			);
 			path = sourceUITests;
-			sourceTree = "<group>";
-		};
-		568B5955206B97A600F7FA59 /* IIXML */ = {
-			isa = PBXGroup;
-			children = (
-				56B6AAF0206CCD43008CEB7F /* XMLDictionary.h */,
-				56B6AAF1206CCD43008CEB7F /* XMLDictionary.m */,
-			);
-			path = IIXML;
-			sourceTree = "<group>";
-		};
-		56949DD120660085009AB1F8 /* IISQLite3.2 */ = {
-			isa = PBXGroup;
-			children = (
-				56949DD220660085009AB1F8 /* sqlite3.h */,
-				56949DD320660085009AB1F8 /* SQLite3.swift */,
-				56949DD420660085009AB1F8 /* sqlite3ext.h */,
-				56949DD620660085009AB1F8 /* src */,
-			);
-			path = IISQLite3.2;
-			sourceTree = "<group>";
-		};
-		56949DD620660085009AB1F8 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				56949DD720660085009AB1F8 /* extra */,
-				56949DE120660085009AB1F8 /* fmdb */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		56949DD720660085009AB1F8 /* extra */ = {
-			isa = PBXGroup;
-			children = (
-				56949DD820660085009AB1F8 /* fts3 */,
-				56949DDE20660085009AB1F8 /* InMemoryOnDiskIO */,
-			);
-			path = extra;
-			sourceTree = "<group>";
-		};
-		56949DD820660085009AB1F8 /* fts3 */ = {
-			isa = PBXGroup;
-			children = (
-				56949DD920660085009AB1F8 /* FMDatabase+FTS3.h */,
-				56949DDA20660085009AB1F8 /* FMDatabase+FTS3.m */,
-				56949DDB20660085009AB1F8 /* FMTokenizers.h */,
-				56949DDC20660085009AB1F8 /* FMTokenizers.m */,
-				56949DDD20660085009AB1F8 /* fts3_tokenizer.h */,
-			);
-			path = fts3;
-			sourceTree = "<group>";
-		};
-		56949DDE20660085009AB1F8 /* InMemoryOnDiskIO */ = {
-			isa = PBXGroup;
-			children = (
-				56949DDF20660085009AB1F8 /* FMDatabase+InMemoryOnDiskIO.h */,
-				56949DE020660085009AB1F8 /* FMDatabase+InMemoryOnDiskIO.m */,
-			);
-			path = InMemoryOnDiskIO;
-			sourceTree = "<group>";
-		};
-		56949DE120660085009AB1F8 /* fmdb */ = {
-			isa = PBXGroup;
-			children = (
-				56949DE220660085009AB1F8 /* FMDatabase.h */,
-				56949DE320660085009AB1F8 /* FMDatabase.m */,
-				56949DE420660085009AB1F8 /* FMDatabaseAdditions.h */,
-				56949DE520660085009AB1F8 /* FMDatabaseAdditions.m */,
-				56949DE620660085009AB1F8 /* FMDatabasePool.h */,
-				56949DE720660085009AB1F8 /* FMDatabasePool.m */,
-				56949DE820660085009AB1F8 /* FMDatabaseQueue.h */,
-				56949DE920660085009AB1F8 /* FMDatabaseQueue.m */,
-				56949DEA20660085009AB1F8 /* FMDB.h */,
-				56949DEB20660085009AB1F8 /* FMResultSet.h */,
-				56949DEC20660085009AB1F8 /* FMResultSet.m */,
-			);
-			path = fmdb;
-			sourceTree = "<group>";
-		};
-		56D4AA3C206C8AE300175F89 /* xmls */ = {
-			isa = PBXGroup;
-			children = (
-				56051FD4206B8C3500571048 /* SourceBean.xml */,
-				56D4AA3D206C8AE300175F89 /* SourceBean1.xml */,
-			);
-			path = xmls;
 			sourceTree = "<group>";
 		};
 		B32FE1A9D0A861A78C0292F4 /* Pods */ = {
@@ -507,12 +358,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56051FD5206B8C3600571048 /* SourceBean.xml in Resources */,
 				566B86382069D81700FD1FEC /* 80x80.png in Resources */,
 				566B863A2069DD9A00FD1FEC /* logo80.png in Resources */,
 				5694BA352061207E006A9465 /* InfoPlist.strings in Resources */,
 				5675C09A205777C20069CB02 /* Assets.xcassets in Resources */,
-				56D4AA3E206C8AE300175F89 /* SourceBean1.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,33 +496,18 @@
 				56738A122057CA3D00EDFB39 /* TwoViewController.swift in Sources */,
 				567185302060AB14002F4272 /* AOPMemCacheV20.swift in Sources */,
 				567185292060AB14002F4272 /* AOPCoreExtension.swift in Sources */,
-				56B6AAF2206CCD43008CEB7F /* XMLDictionary.m in Sources */,
-				56B6AAF6206CD38C008CEB7F /* XMLFactory.swift in Sources */,
-				56051FD1206B73A500571048 /* BLLOne.swift in Sources */,
 				567185282060AB14002F4272 /* AOPCore.swift in Sources */,
 				5671852F2060AB14002F4272 /* AOPMemCache.swift in Sources */,
 				5671852C2060AB14002F4272 /* AOPEvents.swift in Sources */,
 				5671852A2060AB14002F4272 /* AOPDiskCache.swift in Sources */,
-				56949DF020660086009AB1F8 /* FMDatabase+FTS3.m in Sources */,
 				567185272060AB14002F4272 /* IIMergeSort.swift in Sources */,
-				56949DEE20660086009AB1F8 /* SQLite3.swift in Sources */,
-				56949DF220660086009AB1F8 /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
 				5671852D2060AB14002F4272 /* AOPEventsUploadCenter.swift in Sources */,
-				56949DF520660086009AB1F8 /* FMDatabasePool.m in Sources */,
 				562B1CB5206886B500F1182F /* PrivateFramework.swift in Sources */,
-				56949DF320660086009AB1F8 /* FMDatabase.m in Sources */,
 				567185352060AB14002F4272 /* IITaskModel.swift in Sources */,
-				56B6AAEF206CC4A0008CEB7F /* BeanFactory.swift in Sources */,
-				56949DF620660086009AB1F8 /* FMDatabaseQueue.m in Sources */,
-				56949DF720660086009AB1F8 /* FMResultSet.m in Sources */,
-				56051FCF206B739900571048 /* IBLLOne.swift in Sources */,
 				567185312060AB14002F4272 /* AOPNotificationCenter.swift in Sources */,
 				567185322060AB14002F4272 /* AOPNotificationCenterProgressCenter.swift in Sources */,
-				56949DF120660086009AB1F8 /* FMTokenizers.m in Sources */,
 				567185342060AB14002F4272 /* IISlinkManager.swift in Sources */,
 				567185332060AB14002F4272 /* AOPSwiftExtension.swift in Sources */,
-				56949DF420660086009AB1F8 /* FMDatabaseAdditions.m in Sources */,
-				56B6AAF5206CD38C008CEB7F /* BeanDicCenter.swift in Sources */,
 				5671852E2060AB14002F4272 /* AOPGCDExtension.swift in Sources */,
 				5675C093205777C20069CB02 /* AppDelegate.swift in Sources */,
 				5671852B2060AB14002F4272 /* AOPEventFilter.swift in Sources */,
