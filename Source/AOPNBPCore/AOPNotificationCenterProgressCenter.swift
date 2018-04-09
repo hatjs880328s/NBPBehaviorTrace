@@ -36,7 +36,7 @@ class AOPNotificationCenterProgressCenter : NSObject {
     
     func insertIntoMemCacheList(item: GodfatherEvent) {
         if AOPNBPCoreManagerCenter.getInstance().isHaveCacheFunctions {
-            // insert cache
+            // insert cache.
             AOP1LvlMemCacheV20.getInstance().addOneItemFromNotificationCenter(item: item)
         }else{
             // no cache - directly inert into mmap file sys
