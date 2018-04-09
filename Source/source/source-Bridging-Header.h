@@ -6,13 +6,14 @@
 
 #import "AOPMmapOCUtility.h"
 
-//#import "sqlite3.h"
+#import "sqlite3.h"
+
+#import "FMDB.h"
 //
-//#import "FMDB.h"
-//
-//#import "FMDatabase.h"
-//
-//#import "dlfcn.h"
+#import "FMDatabase.h"
+
+// private framework - process
+#import "dlfcn.h"
 //
 //#import "XMLDictionary.h"
 

@@ -32,7 +32,7 @@ protocol IAOPMemCache:NSObjectProtocol {
 
 class AOP1LvlMemCacheV20: NSObject,IAOPMemCache {
     
-    var postCount = 10
+    var postCount = 50
     
     var postSecs = 30
     

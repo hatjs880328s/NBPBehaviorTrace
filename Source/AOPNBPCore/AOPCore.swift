@@ -110,6 +110,9 @@ class AOPNBPCoreManagerCenter: NSObject {
     
     private static var shareInstance: AOPNBPCoreManagerCenter!
     
+    /// aop-nbp-ut have cache ?
+    public var isHaveCacheFunctions: Bool = false
+    
     private override init() {
         super.init()
     }
@@ -121,8 +124,9 @@ class AOPNBPCoreManagerCenter: NSObject {
         return shareInstance
     }
     
-    /// AOP-NBP-monitor-service start 
-    func startService() {
+    /// AOP-NBP-monitor-service start  [withCache-if have cache functions]
+    func startService(_ withCache: Bool = false) {
+        self.isHaveCacheFunctions = withCache
         AOPNotificaitonCenter.getInstance()
         ApplicitonSwizzing().aopFunction()
         TABLESwizzing().aopFunction()

@@ -49,9 +49,10 @@ class AOPEventUploadCenter: NSObject {
             for eachItem in allFilepath {
                 let result = AOPDiskIOProgress.getInstance().getOneFileDataWithFilePath(with: eachItem)
                 if result != nil {
-                    print(result!)
+                    //print(result!)
                 }
             }
+            
         }) {}
     }
 }

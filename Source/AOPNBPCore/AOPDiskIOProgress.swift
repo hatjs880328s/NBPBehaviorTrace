@@ -64,9 +64,7 @@ class AOPDiskIOProgress {
                 return resultStr
             }
             return nil
-        }catch{
-            // donothing[couldn't deleate file]
-        }
+        }catch{}
         return nil
     }
     

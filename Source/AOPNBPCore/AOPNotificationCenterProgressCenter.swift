@@ -35,7 +35,15 @@ class AOPNotificationCenterProgressCenter : NSObject {
     func progressUserinfo() {}
     
     func insertIntoMemCacheList(item: GodfatherEvent) {
-        AOP1LvlMemCacheV20.getInstance().addOneItemFromNotificationCenter(item: item)
+        if AOPNBPCoreManagerCenter.getInstance().isHaveCacheFunctions {
+            // insert cache
+            AOP1LvlMemCacheV20.getInstance().addOneItemFromNotificationCenter(item: item)
+        }else{
+            // no cache - directly inert into mmap file sys
+            AOPDiskIOProgress.getInstance().writeEventsToDisk(with: [NSUUID().uuidString:[item]])
+            //AOPSQliteUtility.getInstance().insertSome(key: NSUUID().uuidString, value: item.description)
+        }
+        
     }
     
     func alertInfo(realInfo: GodfatherEvent) {
