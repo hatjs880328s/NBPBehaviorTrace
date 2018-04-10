@@ -29,6 +29,7 @@ static u_long nowContentLength = 0;
 /// page - size
 static u_long pageSize = 4 * 1024;
 
+
 /**
  write str data to file with mmap-tec
  
@@ -36,29 +37,22 @@ static u_long pageSize = 4 * 1024;
  @param content real str info
  */
 + (void)writeData:(NSString *)fileName fileContent: (NSString *)content {
-    //global-parameters set value
     contents = [content cStringUsingEncoding:NSUTF8StringEncoding];
     memCacheSize = content.length;
-    
-    //rewrite business mmap
     if ((nowContentLength + memCacheSize > pageSize) || nowContentLength == 0) {
-        //create disk file
         NSString *routePath = [NSString stringWithFormat:@"%@",fileName];
         NSString *dirPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"AOPNBPUTFile" ];
         NSString *filePath = [[dirPath stringByAppendingPathComponent:routePath] stringByAppendingPathExtension:@"txt"];
         NSFileManager *fileManager = [NSFileManager defaultManager];
         [fileManager createFileAtPath:filePath contents:nil attributes:nil];
-        //release old mmap file system & create new file
         munmap(startMMAPFile, pageSize);
         nowContentLength = content.length;
         writeFileWithFileName(filePath);
     }else{
-        //write content into old mmap system
         memcpy(startMMAPFile + nowContentLength, contents, memCacheSize);
         nowContentLength += memCacheSize;
     }
 }
-
 
 void writeFileWithFileName( NSString * inPathName){
     size_t dataLength;
@@ -82,16 +76,13 @@ int MapFile( NSString * inPathName, void ** outDataPtr, size_t * outDataLength )
     int outError;
     int fileDescriptor;
     struct stat statInfo;
-    // Return safe values on error.
     outError = 0;
     *outDataPtr = NULL;
     *outDataLength = 0;
-    // Open the file.
     fileDescriptor = open(inPathName.UTF8String, O_RDWR, 0 );
     if( fileDescriptor < 0 ){
         outError = errno;
     }else{
-        // We now know the file exists. Retrieve the file size.
         if( fstat( fileDescriptor, &statInfo ) != 0 ){
             outError = errno;
         }else{
@@ -106,11 +97,9 @@ int MapFile( NSString * inPathName, void ** outDataPtr, size_t * outDataLength )
             if( *outDataPtr == MAP_FAILED ){
                 outError = errno;
             }else{
-                // On success, return the size of the mapped file.
                 *outDataLength = statInfo.st_size;
             }
         }
-        // Now close the file. The kernel doesn’t use our file descriptor.
         close( fileDescriptor );
     }
     return outError;
