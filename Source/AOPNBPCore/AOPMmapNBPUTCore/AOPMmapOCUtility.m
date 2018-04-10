@@ -42,7 +42,6 @@ static u_long pageSize = 4 * 1024;
     
     //rewrite business mmap
     if ((nowContentLength + memCacheSize > pageSize) || nowContentLength == 0) {
-        NSLog(@"create new file");
         //create disk file
         NSString *routePath = [NSString stringWithFormat:@"%@",fileName];
         NSString *dirPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"AOPNBPUTFile" ];

@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AOPNBPCoreManagerCenter.getInstance().startService()
         AOPEventUploadCenter.getInstance().startService()
         
+        AOPEventUploadCenter.getInstance().progressAction = { strResult , handle in
+            print(strResult)
+            handle(true)
+        }
+        
         let con = TwoViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()

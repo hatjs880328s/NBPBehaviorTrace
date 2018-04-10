@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E13EF453384497B361DF9C5 /* Pods_source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466E4E10FEFE95C8EC303234 /* Pods_source.framework */; };
+		562A0B8F207C63CA00D4AFF9 /* AOPDiskIOProgressUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562A0B8E207C63CA00D4AFF9 /* AOPDiskIOProgressUtility.swift */; };
 		562B1CB5206886B500F1182F /* PrivateFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B1CB4206886B500F1182F /* PrivateFramework.swift */; };
 		565258F12058FF000017CF2C /* AOPDoubleLinkedlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565258F02058FF000017CF2C /* AOPDoubleLinkedlist.swift */; };
 		566B86382069D81700FD1FEC /* 80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 566B86372069D81700FD1FEC /* 80x80.png */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		10583F8FD2908CA6B62893EA /* Pods_sourceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sourceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		466E4E10FEFE95C8EC303234 /* Pods_source.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_source.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		562A0B8E207C63CA00D4AFF9 /* AOPDiskIOProgressUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOPDiskIOProgressUtility.swift; sourceTree = "<group>"; };
 		562B1CB4206886B500F1182F /* PrivateFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateFramework.swift; sourceTree = "<group>"; };
 		565258F02058FF000017CF2C /* AOPDoubleLinkedlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOPDoubleLinkedlist.swift; sourceTree = "<group>"; };
 		566B86372069D81700FD1FEC /* 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80x80.png; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				567185202060AB14002F4272 /* AOP1LvlMemCacheV20.swift */,
 				5671851A2060AB14002F4272 /* AOP2LvlMemCache.swift */,
 				56AF59072079A2B600866D4B /* AOPDiskIOProgress.swift */,
+				562A0B8E207C63CA00D4AFF9 /* AOPDiskIOProgressUtility.swift */,
 				5671851D2060AB14002F4272 /* AOPEventsUploadCenter.swift */,
 				56AF5914207A0F6E00866D4B /* AOPSQliteNBPUTCore */,
 				56AF59092079A39900866D4B /* AOPMmapNBPUTCore */,
@@ -629,6 +632,7 @@
 				56AF59112079A41500866D4B /* AOPMmapOCUtility.m in Sources */,
 				567185302060AB14002F4272 /* AOP1LvlMemCacheV20.swift in Sources */,
 				567185292060AB14002F4272 /* AOPCoreExtension.swift in Sources */,
+				562A0B8F207C63CA00D4AFF9 /* AOPDiskIOProgressUtility.swift in Sources */,
 				567185282060AB14002F4272 /* AOPCore.swift in Sources */,
 				56AF5939207A104100866D4B /* FMDatabasePool.m in Sources */,
 				5671852F2060AB14002F4272 /* AOPMemCache.swift in Sources */,

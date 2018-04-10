@@ -26,6 +26,8 @@ class AOPEventUploadCenter: NSObject {
     
     var timer: Timer!
     
+    @objc public var progressAction: ((_ strInfo: String,_ endAction:(_ result:Bool)->Void)->Void)?
+    
     private override init() {
         super.init()
     }
@@ -48,12 +50,19 @@ class AOPEventUploadCenter: NSObject {
         GCDUtils.asyncProgress(dispatchLevel: 3, asyncDispathchFunc: {
             let allFilepath = AOPDiskIOProgress.getInstance().getAllSavedFilepath()
             for eachItem in allFilepath {
+                DEBUGPrintLog(eachItem)
                 let result = AOPDiskIOProgress.getInstance().getOneFileDataWithFilePath(with: eachItem)
                 if result != nil {
-                    //print(result!)
+                    //progress over
+                    if self.progressAction == nil { return }
+                    self.progressAction!(result!) { resultAction in
+                        if resultAction {
+                            //deleate file
+                            AOPDiskIOProgress.getInstance().deleateFile(with: eachItem)
+                        }
+                    }
                 }
             }
-            
         }) {}
     }
     

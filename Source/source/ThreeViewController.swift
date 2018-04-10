@@ -20,7 +20,7 @@ class ThreeViewController: UIViewController {
     }
     
     deinit {
-        print("over-3con")
+        //print("over-3con")
     }
 
 }
