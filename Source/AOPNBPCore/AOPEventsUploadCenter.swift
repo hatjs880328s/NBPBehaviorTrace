@@ -18,6 +18,7 @@
 //
 
 import Foundation
+import UIKit
 
 class AOPEventUploadCenter: NSObject {
     
@@ -55,4 +56,45 @@ class AOPEventUploadCenter: NSObject {
             
         }) {}
     }
+    
 }
+
+
+//class SecondProcess: UIView,URLSessionDelegate,URLSessionDownloadDelegate {
+//    var opq = OperationQueue()
+//
+//    func uploadWithSecondProcess(action: @escaping (_ imageData: Data)->Void) {
+//        let confige = URLSessionConfiguration.background(withIdentifier: "Inspur.sourceTxt77.secondProcessw")
+//        let session = URLSession(configuration: confige, delegate: self, delegateQueue: opq)
+//        let url = URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523279081571&di=9810b505112794371a8f63d6818a2a05&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20160321%2Fxiaolianbaiyunxingzhuangbeijingsucai_6032357_small.jpg")
+//        let request = URLRequest(url: url!)
+//        let task = session.downloadTask(with: request)
+//        task.resume()
+//        print("hehe")
+//    }
+//
+//    public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL){
+//        let path  = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/" + location.absoluteString.components(separatedBy: "/").last!
+//        print(path)
+//        print(location)
+//        let manager = FileManager.default
+//        do {
+//            try manager.moveItem(at: location, to: URL(fileURLWithPath: path))
+//        }catch {
+//            print(error)
+//        }
+//
+//        do {
+//            let data = try Data(contentsOf: URL(fileURLWithPath: path))
+//            DispatchQueue.main.async {
+//                let con = (self.viewController() as! TwoViewController)
+//                con.image.image = UIImage(data: data)
+//            }
+//        }catch {
+//            print(error)
+//        }
+//    }
+//
+//
+//}
+

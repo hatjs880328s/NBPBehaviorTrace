@@ -40,8 +40,12 @@ class AOPNotificationCenterProgressCenter : NSObject {
             AOP1LvlMemCacheV20.getInstance().addOneItemFromNotificationCenter(item: item)
         }else{
             // no cache - directly inert into mmap file sys
+//            print("start your show")
+//            print(Date().timeIntervalSince1970 * 1000)
             AOPDiskIOProgress.getInstance().writeEventsToDisk(with: [NSUUID().uuidString:[item]])
-            //AOPSQliteUtility.getInstance().insertSome(key: NSUUID().uuidString, value: item.description)
+//            print(Date().timeIntervalSince1970 * 1000)
+//            AOPSQliteUtility.getInstance().insertSome(key: NSUUID().uuidString, value: item.description)
+//            print(Date().timeIntervalSince1970 * 1000)
         }
         
     }
