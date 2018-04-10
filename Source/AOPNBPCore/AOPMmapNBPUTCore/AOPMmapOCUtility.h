@@ -19,7 +19,7 @@ int MapFile( NSString * inPathName, void ** outDataPtr, size_t * outDataLength )
  @param fileName custom file name [UUID]
  @param content real str info
  */
-- (void)writeData:(NSString *)fileName fileContent: (NSString *)content ;
++ (void)writeData:(NSString *)fileName fileContent: (NSString *)content ;
 
 
 /**

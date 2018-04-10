@@ -17,3 +17,6 @@
 //
 //#import "XMLDictionary.h"
 
+#import <sys/mman.h>
+#import <sys/stat.h>
+

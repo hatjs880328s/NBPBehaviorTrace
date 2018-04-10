@@ -27,6 +27,9 @@ class AOPDiskIOProgress {
     
     static var shareInstance: AOPDiskIOProgress!
     
+    /// save insert times
+    public static var mmapFileInsertTimes: Int = 0
+    
     private let realAOPDirFolder: String = "/AOPNBPUTFile"
     
     private let nouseFileName: String = "DS_Store"
@@ -45,7 +48,7 @@ class AOPDiskIOProgress {
             for eachItem in eachValue {
                 eventStr += (eachItem.description)
             }
-            AOPMmapOCUtility().writeData(eachKey, fileContent: eventStr)
+            AOPMmapOCUtility.writeData(eachKey, fileContent: eventStr)
         }
     }
     

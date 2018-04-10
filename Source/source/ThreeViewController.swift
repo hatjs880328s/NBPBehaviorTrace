@@ -18,5 +18,9 @@ class ThreeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    deinit {
+        print("over-3con")
+    }
 
 }

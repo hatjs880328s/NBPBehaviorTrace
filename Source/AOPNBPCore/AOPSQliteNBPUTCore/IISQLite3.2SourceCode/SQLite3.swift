@@ -30,7 +30,6 @@ class FMDatabaseQueuePublicUtils: NSObject {
     class func executeUpdate(sql: String){
         if !InitTheDb() { return }
         queueDB.inTransaction { (db, rollback) in
-            //defer {db.commit() ; db.close()}
             do {
                 for eachItem in sql.components(separatedBy: ";") {
                     if eachItem.isEmpty {continue}
@@ -48,7 +47,6 @@ class FMDatabaseQueuePublicUtils: NSObject {
         if !InitTheDb() { return resultLast }
         
         queueDB.inDatabase({ (db) in
-            //defer { db.close() }
             do {
                 let resultSet = try db.executeQuery(sql, values: nil)
                 let count = resultSet.columnCount
