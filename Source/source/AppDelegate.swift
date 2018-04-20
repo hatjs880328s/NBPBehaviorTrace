@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         AOPNBPCoreManagerCenter.getInstance().startService()
-        AOPEventUploadCenter.getInstance().startService()
         
+        AOPEventUploadCenter.getInstance().startService()
         AOPEventUploadCenter.getInstance().progressAction = { strResult , handle in
             print(strResult)
             handle(true)
