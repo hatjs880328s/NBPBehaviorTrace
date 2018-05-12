@@ -38,6 +38,7 @@ class AOPSQliteUtility: NSObject {
     func insertSome(key: String,value: String) {
         let sql = "insert into EventTb values ( '\(key)' , '\(value)');"
         FMDatabaseQueuePublicUtils.executeUpdate(sql: sql)
+//        FMDatabaseQueuePublicUtils.executeSingleSQL(sql: sql)
     }
     
     func getSome()->NSMutableArray {

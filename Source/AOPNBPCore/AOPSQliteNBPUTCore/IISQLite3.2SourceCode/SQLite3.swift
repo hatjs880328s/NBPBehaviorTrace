@@ -9,15 +9,19 @@
 import UIKit
 
 class FMDatabaseQueuePublicUtils: NSObject {
+    
     static var queueDB:FMDatabaseQueue!
     static var dbname = "InspurInterAOPNBPManager.sqlite"
+    static var dbIns: FMDatabase!
     
     class func InitTheDb()->Bool{
-        if queueDB != nil { return true}
-        if(queueDB == nil){
+        if queueDB != nil && dbIns != nil { return true}
+        if(queueDB == nil || dbIns == nil){
             do {
                 let pathNew = try FileManager.default.url(for: FileManager.SearchPathDirectory.applicationSupportDirectory, in: FileManager.SearchPathDomainMask.userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(dbname)
                 queueDB = FMDatabaseQueue(url: pathNew)
+                dbIns = FMDatabase(url: pathNew)
+                dbIns.open()
                 return true
             }catch{
                 return false
@@ -41,6 +45,15 @@ class FMDatabaseQueuePublicUtils: NSObject {
         }
     }
     
+    class func executeSingleSQL(sql: String) {
+        if !InitTheDb() { return }
+        do {
+            try dbIns.executeUpdate(sql, values: nil)
+        }catch {
+            // donothing...
+        }
+    }
+    
     /// execute query  then return Array result like 'select * from xxx where ?'
     class func getResultWithSql(sql: String)->NSMutableArray {
         let resultLast = NSMutableArray()
@@ -55,7 +68,7 @@ class FMDatabaseQueuePublicUtils: NSObject {
                     for i in 0  ..< Int(count)  {
                         var columnName:NSString!
                         columnName = resultSet.columnName(for: Int32(i))! as NSString
-                        let obj: AnyObject! = resultSet.object(forColumn: columnName as String) as AnyObject!
+                        let obj: AnyObject! = resultSet.object(forColumn: columnName as String) as AnyObject?
                         dic.setObject(obj, forKey: columnName)
                     }
                     resultLast.add(dic)
