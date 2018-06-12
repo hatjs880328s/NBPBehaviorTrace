@@ -49,8 +49,9 @@
         }
 # --CHANGE HOOK FUNCTIONS:
 *
-/// extends the superclass : GodfatherSwizzing plz.
-class ApplicitonSwizzing: GodfatherSwizzing {
+   
+    /// extends the superclass : GodfatherSwizzing plz.
+    class ApplicitonSwizzing: GodfatherSwizzing {
     /// application-sendAction
     let appSendActionBlock:@convention(block) (_ id: AspectInfo)-> Void = { aspectInfo in
         let event = AOPEventFilter.appFilter(aspectInfo: aspectInfo)
@@ -72,4 +73,4 @@ class ApplicitonSwizzing: GodfatherSwizzing {
                 .init(rawValue: 0), usingBlock: appSendActionBlock)
         }catch {}
     }
-}
+    }
