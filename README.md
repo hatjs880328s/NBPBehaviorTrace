@@ -38,3 +38,12 @@
 ### 2.2 optimize the upload center 
 * 1.scan documents/nopnoah_shan folder to search all files
 * 2.if one file exist directly return else analyze all except last file 
+
+# HOW TO USE :
+* 1.
+        // start-HOOKFunctions-Service
+        AOPNBPCoreManagerCenter.getInstance().startService()
+        // start-upload-Service
+        AOPEventUploadCenter.getInstance().startService()
+        AOPEventUploadCenter.getInstance().progressAction = { strResult , handle in
+        }
