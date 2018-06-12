@@ -42,8 +42,8 @@
 # HOW TO USE :
 * 
         // start-HOOKFunctions-Service
-        AOPNBPCoreManagerCenter.getInstance().startService()\n
+        AOPNBPCoreManagerCenter.getInstance().startService()
         // start-upload-Service
-        AOPEventUploadCenter.getInstance().startService()\n
+        AOPEventUploadCenter.getInstance().startService()
         AOPEventUploadCenter.getInstance().progressAction = { strResult , handle in
         }
