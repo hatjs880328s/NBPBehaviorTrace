@@ -49,8 +49,8 @@
         }
 # --CHANGE HOOK FUNCTIONS:
 *
-    `
-    /// extends the superclass : GodfatherSwizzing plz.
+    
+    /// extends the superclass : GodfatherSwizzing plz.\n
     class ApplicitonSwizzing: GodfatherSwizzing {
     /// application-sendAction
     let appSendActionBlock:@convention(block) (_ id: AspectInfo)-> Void = { aspectInfo in
@@ -74,4 +74,4 @@
         }catch {}
     }
     }
-    `
+    
