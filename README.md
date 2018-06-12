@@ -1,4 +1,4 @@
-# NBPUser- behavior trace
+# --NBPUser- behavior trace
 
 
 ![swift](http://chuantu.biz/t6/273/1522900210x1822611227.jpg)-swift
@@ -39,7 +39,7 @@
 * 1.scan documents/nopnoah_shan folder to search all files
 * 2.if one file exist directly return else analyze all except last file 
 
-# HOW TO USE :
+# --HOW TO USE :
 * 
         // start-HOOKFunctions-Service
         AOPNBPCoreManagerCenter.getInstance().startService()
