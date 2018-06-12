@@ -40,10 +40,10 @@
 * 2.if one file exist directly return else analyze all except last file 
 
 # HOW TO USE :
-* 1.
+* 
         // start-HOOKFunctions-Service
-        AOPNBPCoreManagerCenter.getInstance().startService()
+        AOPNBPCoreManagerCenter.getInstance().startService()\n
         // start-upload-Service
-        AOPEventUploadCenter.getInstance().startService()
+        AOPEventUploadCenter.getInstance().startService()\n
         AOPEventUploadCenter.getInstance().progressAction = { strResult , handle in
         }
