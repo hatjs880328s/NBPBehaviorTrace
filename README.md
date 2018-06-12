@@ -49,13 +49,13 @@
         }
 # --CHANGE HOOK FUNCTIONS:
 *
-         ..
+         
          // extends the superclass : GodfatherSwizzing plz.
          class ApplicitonSwizzing: GodfatherSwizzing {
          // application-sendAction
          let appSendActionBlock:@convention(block) (_ id: AspectInfo)-> Void = { aspectInfo in
-               let event = AOPEventFilter.appFilter(aspectInfo: aspectInfo)
-               GodfatherSwizzingPostnotification.postNotification(notiName: Notification.Name.InspurNotifications().appSendActions,
+             let event = AOPEventFilter.appFilter(aspectInfo: aspectInfo)
+             GodfatherSwizzingPostnotification.postNotification(notiName: Notification.Name.InspurNotifications().appSendActions,
                                                            userInfo: [AOPEventType.applicationSendaction:event])
          }
          // navigation-pop(custom btn replace the sys navigationBar-backBtn)
@@ -67,7 +67,7 @@
                   try UIControl.aspect_hook(#selector(UIControl.sendAction(_:to:for:)),
                                      with: .init(rawValue: 0),
                                      usingBlock: appSendActionBlock)
-                try UINavigationController.aspect_hook(#selector(UINavigationController.popViewController(animated:)), with:
+                  try UINavigationController.aspect_hook(#selector(UINavigationController.popViewController(animated:)), with:
                 .init(rawValue: 0), usingBlock: appSendActionBlock)
          }catch {}
          }
