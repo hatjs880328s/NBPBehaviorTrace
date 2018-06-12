@@ -49,7 +49,7 @@
         }
 # --CHANGE HOOK FUNCTIONS:
 *
-   
+    `
     /// extends the superclass : GodfatherSwizzing plz.
     class ApplicitonSwizzing: GodfatherSwizzing {
     /// application-sendAction
@@ -74,3 +74,4 @@
         }catch {}
     }
     }
+    `
