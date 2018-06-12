@@ -50,7 +50,8 @@
 # --CHANGE HOOK FUNCTIONS:
 *
     
-    /// extends the superclass : GodfatherSwizzing plz.\n
+    
+    /// extends the superclass : GodfatherSwizzing plz.
     class ApplicitonSwizzing: GodfatherSwizzing {
     /// application-sendAction
     let appSendActionBlock:@convention(block) (_ id: AspectInfo)-> Void = { aspectInfo in
@@ -59,9 +60,11 @@
                                                            userInfo: [AOPEventType.applicationSendaction:event])
     }
     
+    
     /// navigation-pop(custom btn replace the sys navigationBar-backBtn)
     let navigationPopBlock:@convention(block) (_ id: AspectInfo)-> Void = { aspectInfo in
     }
+    
     
     /// application sendaction
     override func aopFunction() {
