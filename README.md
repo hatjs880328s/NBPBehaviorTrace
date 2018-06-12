@@ -40,7 +40,7 @@
 * 2.if one file exist directly return else analyze all except last file 
 
 # --HOW TO USE :
-* 
+ 
         // start-HOOKFunctions-Service
         AOPNBPCoreManagerCenter.getInstance().startService()
         // start-upload-Service
@@ -48,7 +48,7 @@
         AOPEventUploadCenter.getInstance().progressAction = { strResult , handle in
         }
 # --CHANGE HOOK FUNCTIONS:
-*
+
          
          // extends the superclass : GodfatherSwizzing plz.
          class ApplicitonSwizzing: GodfatherSwizzing {
