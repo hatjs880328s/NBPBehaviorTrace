@@ -46,12 +46,38 @@ class TABLESwizzing: GodfatherSwizzing {
         GodfatherSwizzingPostnotification.postNotification(notiName: Notification.Name.InspurNotifications().tbDidSelectedAction, userInfo: [AOPEventType.tbselectedAction:event])
     }
     
+    let tbBGBlock: @convention(block) (_ id: AspectInfo)->Void = {aspectInfo in
+        
+        let tab = (aspectInfo.instance() as! UITableView)
+        let boolStr = IIModuleCore.getInstance().invokingSomeFunciton(url: "MineServiceModule/isShowAlertInfo", params: nil, action: nil)
+        if boolStr == nil { return }
+        if (boolStr as! String) == "true" {
+            if tab.numberOfRows(inSection:0) != 0 {
+                tab.backgroundView = nil
+            }else{
+                let resultVw = IIModuleCore.getInstance().invokingSomeFunciton(url: "MineServiceModule/getAlertVwWithParams:", params: ["frame":tab.frame], action: nil)
+                tab.backgroundView = resultVw as? UIView
+            }
+        }else {
+            tab.backgroundView = nil
+            return
+        }
+    }
+    
+    let tbRemoveBGBlock: @convention(block) (_ id : AspectInfo)->Void = {aspectInfo in
+        let tab = aspectInfo.instance() as! UITableView
+        tab.backgroundView = nil
+    }
+    
     /// tab-celldeselected
     override func aopFunction() {
         do {
             try UITableView.aspect_hook(#selector(UITableView.deselectRow(at:animated:)),
                                         with: .init(rawValue:0),
                                         usingBlock: tbDidselectedBlock)
+            try UITableView.aspect_hook(#selector(UITableView.reloadData),
+                                        with: .init(rawValue:0),
+                                        usingBlock: tbBGBlock)
         }catch {}
     }
 }
@@ -105,7 +131,7 @@ class ApplicitonSwizzing: GodfatherSwizzing {
 }
 
 
-/// aop core manager---start service here
+/// aop core manager---start service here [iipitching ^ aopnbpcore]
 class AOPNBPCoreManagerCenter: NSObject {
     
     private static var shareInstance: AOPNBPCoreManagerCenter!
@@ -126,11 +152,25 @@ class AOPNBPCoreManagerCenter: NSObject {
     
     /// AOP-NBP-monitor-service start  [withCache-if have cache functions]
     func startService(_ withCache: Bool = false) {
+        self.createFolder()
         self.isHaveCacheFunctions = withCache
         AOPNotificaitonCenter.getInstance()
         ApplicitonSwizzing().aopFunction()
         TABLESwizzing().aopFunction()
         VCSwizzing().aopFunction()
+    }
+    
+    /// before start service - create AOPNBP Folder - for mmap open file function
+    private func createFolder() {
+        let aopFileFolder = NSHomeDirectory().stringByAppendingPathComponent("Documents").stringByAppendingPathComponent("AOPNBPUTFile")
+        let filemanager = FileManager()
+        var isDir:ObjCBool = false
+        let exist = filemanager.fileExists(atPath: aopFileFolder, isDirectory: &isDir)
+        if !(isDir.boolValue && exist) {
+            do {
+                try filemanager.createDirectory(atPath: aopFileFolder, withIntermediateDirectories: true, attributes: nil)
+            }catch {}
+        }
     }
 }
 
