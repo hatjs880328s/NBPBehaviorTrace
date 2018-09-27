@@ -23,7 +23,7 @@
 *   3.basic file/dir progress [file create | file deleate | file read | file write(use mmap)]
 
 
-### 2.1 optimize the mmap over
+### 2.1 optimize the mmap 
 * 1.add cache & no cache function change
 * 2.use mmap save info
 * 3.import sqliteFMDB but no use ( if mmap couldn't do well, change to sqlite very easy)
