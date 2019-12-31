@@ -1,0 +1,9 @@
+
+
+language: objective-c
+osx_image: xcode10.2
+xcode_sdk: iphonesimulator12.0
+script:
+- set -o pipefail
+- travis_retry xcodebuild clean build -workspace PoietData.xcworkspace -scheme PoietData -destination "platform=iOS Simulator,name=iPhone 6" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+
